@@ -4,7 +4,7 @@ Exports Kubernetes services selectors as metrics.
 
 Uses Kubernetes API to collect services info.
 
-[Source Code](https://github.com/hystax/kube-service-selectors) |  [Docker Image](https://hub.docker.com/r/hystax/kube-service-selectors)
+[Source Code](https://github.com/hystax/kube-service-selectors) | [Docker Image](https://hub.docker.com/r/hystax/kube-service-selectors) | [Helm chart](https://github.com/hystax/helm-charts/tree/main/charts/kube-service-selectors)
 
 ## Metrics description
 | Metric name| Metric type | Description | Labels/tags |
@@ -32,7 +32,7 @@ optional arguments:
                         used if config missing
 ```
 
-#### From source
+### From source
 The exporter requires Python 3.6 or above and Pip 3 to install requirements:
 ```bash
 > pip3 install -r requirements.txt
@@ -42,7 +42,7 @@ By default server listens on 30091. Kubernetes config should be placed behind ex
 > PYTHONPATH=.. python3 main.py --kubeconfig <kubeconfig_path>
 ```
 
-#### Using Docker
+### Using Docker
 ```bash
 > docker run -d -v <kubeconfig_path>:/usr/src/app/kube_service_selectors/kubeconfig -p 30091:30091 --name kss_exporter  hystax/kube_service_selectors
 ```
