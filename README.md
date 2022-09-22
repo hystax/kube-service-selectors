@@ -44,5 +44,5 @@ By default server listens on 30091. Kubernetes config should be placed behind ex
 
 ### Using Docker
 ```bash
-> docker run -d -v <kubeconfig_path>:/usr/src/app/kube_service_selectors/kubeconfig -p 30091:30091 --name kss_exporter  hystax/kube_service_selectors
+> docker run -d -v <kubeconfig_path>:/usr/src/app/kube_service_selectors/kubeconfig -p 30091:30091 --name kss_exporter  hystax/kube-service-selectors
 ```
